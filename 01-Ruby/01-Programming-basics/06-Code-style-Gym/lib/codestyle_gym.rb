@@ -2,7 +2,8 @@ class Player_moving
   Grid_POSITIONS = (1..100).to_a
 
 def initialize(position)
-  @position = position ; @iterations = 0;
+  @position = position
+  @iterations = 0
   unless Grid_POSITIONS.include? @position
     raise "Initial position must be between 1 and 100"
   end
@@ -36,15 +37,17 @@ def status_Player
   end
 end
 
-def hasWon
+def has_Won
     status_Player == :win
+end
+
 end
 
 player = Player_moving.new(50)
 player.play
 puts player.status_Player == :play # true
 player.cheat
-puts player.hasWon == true
+puts player.has_Won == true
 
 begin
   Player_moving.new(110)
