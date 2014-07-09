@@ -8,17 +8,17 @@ def play_game
 
   while asking_for_card?(score) == true
     score += pick_card
-    state_of_the_game(score, bank_card)
+    puts state_of_the_game(score, bank_card)
   end
 
   outcome = game_outcome(bank_card, score)
-puts build_message_for(outcome)
+  puts build_message_for(outcome)
 
 end
-#TODO: make the user play from terminal in a while loop that will stop when the user will not be asking for  a new card
+
 
 def state_of_the_game(score, bank)
-  return "Your score is #{score}, bank is #{bank}!"
+  "Your score is #{score}, bank is #{bank}!"
   # TODO: Returns custom message with player's score and bank's score
 end
 
