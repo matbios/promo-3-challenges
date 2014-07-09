@@ -1,5 +1,6 @@
-def bugged_concatenate(array)
-  array.inject("") { |output, element| output + element }.upcase
+def bugged_concatenate(*array)
+  array.join.upcase
+
 end
 
 def build_1984_title
