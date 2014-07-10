@@ -2,6 +2,8 @@ def shuffle_word(a_word)
   a_word.upcase.chars.shuffle
 end
 
+# à savoir que la fonctin chars va créer direct un array.
+
   #TODO: refactor this method
   #cap_word = a_word.upcase
   #chars_enum = cap_word.chars
