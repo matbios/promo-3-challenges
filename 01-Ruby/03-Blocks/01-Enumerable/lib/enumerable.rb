@@ -51,13 +51,21 @@ end
 
 
 def product(array)
-  # TODO: Calculate the product of an array of numbers.
-  #       You should use of Enumerable#reduce
+  array.reduce(1) do |x, n|
+    x * n
+  end
 end
+# TODO: Calculate the product of an array of numbers.
+# You should use of Enumerable#reduce
+# product([2,12,2])
 
 def sorted_pairs(array)
-  # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
-  #       You should make use of Enumerable#each_slice
+  result = []
+  array.each_slice(2) { |couple| result << couple.sort }
+  result
 end
-
+# TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
+# You should make use of Enumerable#each_slice
+# sorted_pairs(["azazaza","ddsd","dgdgdgdg","fdgd","egjpgn"])
+# on a mis "p" dans la méthode pour afficher des tableaux en sortie, si on voulait chaque valeur sur une nouvelle ligne on aurait mis "puts"
 
