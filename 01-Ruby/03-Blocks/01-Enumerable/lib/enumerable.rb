@@ -14,7 +14,7 @@ end
 
 def even_numbers(array)
   array.select do |num|
-    nom.even?
+    num.even?
   end
 end
 # TODO: Return the even numbers from a list of integers.
@@ -30,10 +30,15 @@ end
 # You should use Enumerable#reject
 # short_words(["salut","cool","bidons"],4)
 
+
 def first_under(array, limit)
-  # TODO: Return the first number from an array that is less than limit.
-  #       You should use Enumerable#find
+  array.find do |x|
+  x < limit
+  end
 end
+  # TODO: Return the first number from an array that is less than limit.
+  # You should use Enumerable#find
+  # first_under([2,10,1,1,4,5], 3)
 
 def add_bang(array)
   # TODO: Take an array of strings and return a new array with "!" appended to each string.
