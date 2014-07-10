@@ -41,9 +41,14 @@ end
   # first_under([2,10,1,1,4,5], 3)
 
 def add_bang(array)
-  # TODO: Take an array of strings and return a new array with "!" appended to each string.
-  #       You should use Enumerable#map
+  array.map do |x|
+    "#{x}!"
+  end
 end
+  # TODO: Take an array of strings and return a new array with "!" appended to each string.
+  # You should use Enumerable#map
+  #=> ["The Honourable Axelle Lemaire", "The Honourable Benoit Hamon"]
+
 
 def product(array)
   # TODO: Calculate the product of an array of numbers.
