@@ -2,16 +2,16 @@
 
 def mail_joke(email)
 
-  unless email.is_a?(String)
+  unless email.is_a?(String) && email.include?("@")
     fail ArgumentError
   end
 
-    unless email.include?("@")
-      fail ArgumentError
-    end
-
   email_ndd = email.split("@").last
   email_owner = email.split("@").first.gsub('.',' ')
+
+# email_ndd = email.scan(/@(.*)$/).join
+# +  email_owner = email.scan(/^(.*)@/).join
+# +  email_owner = email_owner.gsub('.',' ')
 
   case email_ndd
     when "lewagon.org"
