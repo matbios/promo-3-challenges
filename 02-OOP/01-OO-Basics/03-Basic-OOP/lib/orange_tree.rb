@@ -20,7 +20,6 @@ class OrangeTree
     dead?
   end
 
-
   def fruits_growth
     @fruits = 0
     if (6..10).cover?(@age)
