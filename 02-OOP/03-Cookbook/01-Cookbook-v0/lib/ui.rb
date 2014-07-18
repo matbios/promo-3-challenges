@@ -1,10 +1,5 @@
 class UI
 
-  def welcome
-    puts "-- Welcome to the CookBook --"
-
-  end
-
   def ask_user_choice
     puts "What do you wanna do?"
     puts "- List all recipes [list]"
@@ -24,8 +19,8 @@ class UI
 
   def add_recipe
     puts "-- Enter a new recipe name --"
-    name = gets.chomp
-    return name
+    recipe_added = gets.chomp
+    return recipe_added
   end
 
   def add_recipe_succesfull(name)
@@ -39,13 +34,13 @@ class UI
   def delete_recipe
     puts "-- Delete a recipe by specifying it's number --"
     recipe_number = gets.chomp.to_i
-    return recipe_number - 1
+    return recipe_deleted = recipe_number - 1
   end
 # controller : Your Crumpets recipe has been successfully deleted !
 
-  def exit
-    puts "Goodbye, my dear friend."
-  end
+  # def exit
+  #   puts "Goodbye, my dear friend."
+  # end
 
 end
 

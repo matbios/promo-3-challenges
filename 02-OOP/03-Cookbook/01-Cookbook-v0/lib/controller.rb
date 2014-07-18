@@ -17,7 +17,7 @@ class Controller
     @cookbook.add(cookbook.new(name))
   end
 
-  def delete
+  def delete_recipe
     recipe_id_to_delete = @ui.delete_recipe(name)
     @cookbook.remove(recipe_id_to_delete)
   end
