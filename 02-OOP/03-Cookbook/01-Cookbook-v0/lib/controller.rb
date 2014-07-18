@@ -1,25 +1,26 @@
 require_relative 'cookbook'
+require_relative 'recipe'
 require_relative 'ui'
 
 class Controller
 
-  def initialize
-    @cookbook = Cookbook.new
+  def initialize(cookbook)
+    @cookbook = cookbook
     @ui = Ui.new
   end
 
-  def fetch_and_display_recipes
+  def list
     @ui.recipes_display(@cookbook.recipes_list)
   end
 
-  def add_recipe
-    name = @ui.add_recipe
-    @cookbook.add(cookbook.new(name))
+  def create
+    recipe_added = @ui.add_recipe
+    @cookbook.add(Recipe.new(recipe_added.first, recipe_added.last))
   end
 
-  def delete_recipe
-    recipe_id_to_delete = @ui.delete_recipe(name)
-    @cookbook.remove(recipe_id_to_delete)
+  def destroy
+    recipe_id_to_deleted = @ui.delete_recipe(recipe_deleted)
+    @cookbook.remove(recipe_id_to_deleted)
   end
 
 end

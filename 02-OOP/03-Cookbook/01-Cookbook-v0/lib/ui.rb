@@ -1,34 +1,21 @@
-class UI
+require_relative 'cookbook'
+require_relative 'recipe'
 
-  def ask_user_choice
-    puts "What do you wanna do?"
-    puts "- List all recipes [list]"
-    puts "- Add a new recipe [add]"
-    puts "- Delete a recipe [del]"
-    puts "- Exit [Esc.]"
-    choice = gets.chomp
-    return choice
-  end
+class Ui
 
   def recipes_display(recipes_list)
     puts "-- Here are all your recipes --"
     recipes_list.each.with_index do |recipe, index|
-      puts "#{index + 1}. #{recipe}"
+      puts "#{index + 1}. #{recipe.name} - #{recipe.description}"
     end
   end
 
   def add_recipe
     puts "-- Enter a new recipe name --"
-    recipe_added = gets.chomp
-    return recipe_added
-  end
-
-  def add_recipe_succesfull(name)
-    puts "Your #{name} recipe has been added successfully !"
-  end
-
-  def delete_recipe_succesfull(name)
-    puts "Your #{name} recipe has been successfully deleted !"
+    recipe_name = gets.chomp
+    puts "-- Enter a new recipe description--"
+    recipe_description = gets.chomp
+    return [recipe_name, recipe_description]
   end
 
   def delete_recipe
@@ -36,13 +23,40 @@ class UI
     recipe_number = gets.chomp.to_i
     return recipe_deleted = recipe_number - 1
   end
+
+end
+
+
+
+  # def add_recipe_succesfull(name)
+  #   puts "Your #{name} recipe has been added successfully !"
+  # end
+
+  # def delete_recipe_succesfull(name)
+  #   puts "Your #{name} recipe has been successfully deleted !"
+  # end
+
+
+
+
+#############################
+
+  # def ask_user_choice
+  #   puts "What do you wanna do?"
+  #   puts "- List all recipes [list]"
+  #   puts "- Add a new recipe [add]"
+  #   puts "- Delete a recipe [del]"
+  #   puts "- Exit [Esc.]"
+  #   choice = gets.chomp
+  #   return choice
+  # end
+
+
 # controller : Your Crumpets recipe has been successfully deleted !
 
   # def exit
   #   puts "Goodbye, my dear friend."
   # end
-
-end
 
 
 #######################
