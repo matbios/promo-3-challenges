@@ -26,7 +26,7 @@ class Cookbook
     write_csv
   end
 
-  def delete_recipe(index)
+  def remove_recipe(index)
     @recipes_list.delete_at(index)
     write_csv
   end
@@ -37,6 +37,10 @@ class Cookbook
         csv << [recipe.name, recipe.description]
       end
     end
+  end
+
+  def recipes
+    return @recipes_list
   end
 
 end

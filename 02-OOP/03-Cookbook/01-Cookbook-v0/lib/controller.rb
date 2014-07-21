@@ -15,12 +15,12 @@ class Controller
 
   def create
     recipe_added = @ui.add_recipe
-    @cookbook.add(Recipe.new(recipe_added.first, recipe_added.last))
+    @cookbook.add_recipe(Recipe.new(recipe_added.first, recipe_added.last))
   end
 
   def destroy
-    recipe_id_to_deleted = @ui.delete_recipe(recipe_deleted)
-    @cookbook.remove(recipe_id_to_deleted)
+    recipe_id_to_deleted = @ui.delete_recipe
+    @cookbook.remove_recipe(recipe_id_to_deleted)
   end
 
 end
