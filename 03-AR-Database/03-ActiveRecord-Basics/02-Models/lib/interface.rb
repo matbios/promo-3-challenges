@@ -18,6 +18,7 @@ end
 
 def get_posts
   # TODO: use your model to get all posts
+  # bibi
   posts = Post.all
 
   puts '-' * 50
