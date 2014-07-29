@@ -36,6 +36,7 @@ def delete_posts(user)
   user_posts = user.posts
   user_posts.destroy_all
   # TODO: use ActiveRecord to delete all posts of current user
+  #done
 end
 
 
