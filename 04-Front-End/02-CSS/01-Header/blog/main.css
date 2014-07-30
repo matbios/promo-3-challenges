@@ -1,5 +1,75 @@
+/**
+ *
+ */
+
+body {
+  font-weight: 300;
+}
+
+/**
+ * le conteneur est la classe sur la div du contenu du body, tout y est, nous définissons ici sa largeur, font et marge.
+ */
+
 .container {
   margin: 0 auto;
   width: 720px;
 	font-family: 'Open Sans', sans-serif;
 }
+
+/**
+ * nous allons définir le style des éléments dans les UL des balises headers.
+ */
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+  text-align: center;
+}
+
+/**
+ * et ici le style pour le contenu en LI dans les balises headers.
+ * le inline block permet de remettre tous les éléments de la liste sur une seule ligne horizontale.
+ */
+
+header li{
+  display:inline-block;
+}
+
+/**
+ * style de tous les liens (balises a) dans une balise header
+ * l'afficher en un block pour le garder dans le même block, et on met une largeur,  tous les éléments seront calés dans leur propre block.
+ */
+
+header a{
+  display:block;
+  width:100px;
+}
+
+/**
+ * sur les balises headers, on va définir une bordure en bas de 1 pixel de large... et un padding (marge interne générale) de 10px.
+ */
+
+header{
+  border-bottom: 1px dotted grey;
+  padding: 10px;
+}
+
+/**
+ * on met un padding (marge interne) sur l'élement du footer.
+ */
+
+footer{
+  border-top: 1px dotted grey;
+  padding: 10px;
+}
+
+/**
+ * afficher les balises h1 en position centrée.
+ */
+
+h1 {
+  text-align: center;
+}
+
+
