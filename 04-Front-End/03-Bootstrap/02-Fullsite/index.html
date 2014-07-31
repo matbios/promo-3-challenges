@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Iceme - Dégustez une glace</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+
+<body>
+
+
+<!-- navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ICE ME</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Suivez-vous !<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- end navbar -->
+
+
+<!-- BIG PICTURE -->
+<div class="wrapper">
+  <div class="lead">
+    <h1>DÉGUSTEZ UNE GLACE</h1>
+    <h2>MAINTENANT TOUT DE SUITE</h2>
+    <p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Je veux une glace</button></p>
+  </div>
+</div>
+<!-- END BIG PICTURE -->
+
+
+
+<!-- Modal -->
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Commandez !</h4>
+      </div>
+
+      <div class="modal-header">
+        <h2>Vous voulez acheter une glace ?</h2>
+        <p>Deux petites secondes, on a besoin de certaines informations.</p>
+      </div>
+
+      <div class="modal-body">
+
+        <form class="modalform" role="form">
+
+          <label for="nom">Nom</label>
+          <div class="form-group">
+
+            <div class="row">
+              <div class="col-xs-4">
+                <input type="email" class="form-control" id="prenom">
+                <p>prénom</p>
+              </div>
+              <div class="col-xs-4">
+              <input type="nom" class="form-control" id="nom">
+              <p>nom</p>
+              </div>
+            </div>
+            <div>
+              <label for="nom">Numéro de téléphone</label>
+              <div>
+                <input type="nom" class="form-control" id="nom">
+              </div>
+            </div>
+
+            <div>
+              <label for="nom">Parfum</label>
+              <div>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="chocolat"> 1
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="vanille"> 2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Melon"> 3
+                </label>
+                </div>
+              </div>
+
+              <div>
+                <label for="nom">Format</label>
+                <div>
+                  <select class="form-control">
+                  <option>pot</option>
+                  <option>cornet</option>
+                  </select>
+                  </div>
+              </div>
+
+          </div>
+
+
+          <button type="submit" class="btn btn-default">Soumettre</button>
+        </form>
+
+      </div>
+
+      <div class="modal-footer">
+      my footer
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- END Modal -->
+
+
+
+<div class="vertical-spacer"></div>
+
+<!-- Services -->
+<div class="container">
+
+  <div class="row text-center">
+
+    <div class="col-sm-6 col-md-3">
+      <div class="feature">
+        <div class="feature-picture">
+          <img src="http://www.iceme.fr/images/icon_57707/icon_57707.png" width="96">
+        </div>
+        <p>
+          Choisissez jusque trois parfums parmis notre catalogue de <strong>1000</strong> glaces maison.
+        </p>
+      </div>
+    </div>
+
+     <div class="col-sm-6 col-md-3">
+      <div class="feature">
+        <div class="feature-picture">
+          <img src="http://www.iceme.fr/images/icon_29388/icon_29388.png" width="96">
+        </div>
+        <p>
+          L'application vous <strong>géolocalise</strong> automatiquement et vous indique le temps d'attente estimé.
+        </p>
+      </div>
+    </div>
+
+     <div class="col-sm-6 col-md-3">
+      <div class="feature">
+        <div class="feature-picture">
+          <img src="http://www.iceme.fr/images/icon_24755/icon_24755.png" width="96">
+        </div>
+        <p>
+          Un de nos supers livreurs fonce pour vous apporter votre glace, qui sera <strong>préparée juste à temps</strong>.
+        </p>
+      </div>
+    </div>
+
+     <div class="col-sm-6 col-md-3">
+      <div class="feature">
+        <div class="feature-picture">
+          <img src="http://www.iceme.fr/images/icon_17805/icon_17805.png" width="96">
+        </div>
+        <p>
+          Pas de monnaie ? Pas un problème, le paiement est <strong>automatiquement</strong> débité sur votre carte bancaire.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- END Services -->
+
+<div class="vertical-spacer"></div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <!-- Begin MailChimp Signup Form -->
+      <h2>Inscrivez-vous à la Newsletter</h2>
+        <div id="mc_embed_signup">
+            <form action="http://iceme.us8.list-manage.com/subscribe/post?u=0f796021763dc414ae74dfa60&id=d4fc47ad7d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
+              <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required="">
+              <input type="submit" value="Suivez-nous" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+  </div>
+</div>
+<!--End mc_embed_signup-->
+<div class="vertical-spacer"></div>
+
+
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <ul class="list-inline social text-center">
+          <li><a href="https://twitter.com/iceme"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/ice.me"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="http://instagram.com/iceme/"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/iceme"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-lg-9">
+        <div class="text-center">
+          <p>IceMe est une compagnie fictive créée dans le cadre de <a href="http://www.cetetejecode.fr">cetetejecode.fr</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</html>
