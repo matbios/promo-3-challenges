@@ -1,13 +1,76 @@
 <!DOCTYPE html>
-<html>
+
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JAJAX Wagon Race</title>
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <button id="start-btn" class="start-hidden">Play</button>
+
+    <br/>
+
+    <form id="names-form" class="start-hidden" method="post">
+      <p>
+        <label for="player1-name">Player 1 :</label>
+        <input type="text" name="player1_name" id="player1-name"/>
+      </p>
+      <p>
+        <label for="player2-name">Player 2 :</label>
+        <input type="text" name="player2_name" id="player2-name"/>
+      </p>
+      <p>
+        <input type="submit" value="OK"/>
+      </p>
+    </form>
+
+
+
+    <table class="racer_table" id="board">
+      <tr id="player1">
+        <td class="active"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr id="player2">
+        <td class="active"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+    </table>
+
+
+    <div id="center_results">
+      <div id="results"></div>
+      <button id="new_game" class="start-hidden">Play again</button>
+      <button id="new_session" class="start-hidden">New session</button>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
     <script src="/js/game.js"></script>
+
   </body>
 </html>
