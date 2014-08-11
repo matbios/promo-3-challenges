@@ -22,4 +22,3 @@ puts "Your score: #{result[:score]}"
 puts "Message: #{result[:message]}"
 
 puts "*****************************************************"
-
