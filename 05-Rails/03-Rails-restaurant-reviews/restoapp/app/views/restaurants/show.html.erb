@@ -1,0 +1,37 @@
+
+<ul class="nav nav-tabs" role="tablist">
+  <li><a href="/restaurants">Restaurants list</a></li>
+  <li><a href="/restaurants/new">Add a restaurant</a></li>
+</ul>
+
+<h1> <%= @restaurant.name %>  </h1>
+
+<p> Address : <%= @restaurant.address %>  </p>
+<p> Phone : <%= @restaurant.phone %>  </p>
+<%= link_to 'Back', restaurants_path %>
+
+
+<h2>Reviews:</h2>
+<% @restaurant.reviews.each do |review| %>
+  <p>
+    <strong>Review:</strong>
+    <%= review.content %>
+    <br>
+    <strong>Rating:</strong>
+    <%= review.rating %>
+  </p>
+<% end %>
+
+<h2>Add a review:</h2>
+<%= form_for([@restaurant, @restaurant.reviews.build]) do |f| %>
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </p>
+  <p>
+    <%= f.select :rating, options_for_select([[0 ,0],[1 ,1],[2 ,2],[3 ,3],[4 ,4],[5 ,5]]) %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

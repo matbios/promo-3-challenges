@@ -1,0 +1,16 @@
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#">Restaurants list</a></li>
+  <li><a href="/restaurants/new">Add a restaurant</a></li>
+</ul>
+
+<h1>Restaurants list :</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <% if restaurant.reviews.count > 0 %>
+      <% @average_rating = restaurant.reviews.average(:rating) %>
+      <% else @average_rating = "- "%>
+    <% end %>
+    <li><%=link_to(restaurant.name, restaurant_path(restaurant))%> (<%= restaurant.reviews.count %> reviews, average : <%= @average_rating %>) -- <%= link_to "destroy", restaurant_path(restaurant), method: :delete%> </li>
+  <% end %>
+</ul>
