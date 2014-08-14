@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
-  get '/answer', to: 'coaching#answer', as:'answer'
+  root 'coaching#answer'
+# Permet de rediriger sur l'index du site la page answer, sinon mettre le code commenté ci-desous :
+  # get '/answer', to: 'coaching#answer', as:'answer'
 
   get '/ask', to: 'coaching#ask', as:'ask'
+  # Autre manière de l'ecrire : get 'ask' => 'coaching#ask'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
